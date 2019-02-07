@@ -1,0 +1,78 @@
+/* Steven Lim Index Page */
+header{
+	font-size: 42px;
+	text-shadow: 1px 1px Black;
+	text-align: center;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	padding-top: 25px;
+	font-weight: bold;
+}
+
+body{
+	margin-top: 10px;
+	background-color: #061938;
+}
+
+#wrapper{
+	width: 80%;
+	height: 100%;
+	margin: auto;
+	box-shadow: 5px 5px 5px #2e0000;
+	background-color:#66ccff;
+	color:#666666;
+	background-image: linear-gradient(to bottom, #4F6D93, #f7cd9e);
+}
+
+p{
+	font-size: 14px;
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	color: black;
+}
+
+img{
+	background-repeat: no-repeat;
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-top: 5px;
+	
+}
+
+nav{
+	margin:auto;
+	margin-bottom: 20px;
+	width: 475px;
+	text-align: center;
+	font-weight: bold;
+
+}
+
+nav ul{
+	font-size: 14px;
+	margin: auto;
+	padding: 0;
+	list-style-type: none
+}
+
+nav li{
+	margin-top: 10px;
+	padding: 5px;
+	font-family: 'Merriweather', serif;
+	background-image: linear-gradient(to bottom, #4F6D93, #ffffff);
+	border-style: solid;
+	border-radius: 5px;
+}
+
+nav a{
+	text-decoration: none;
+}
+
+nav a:link { color: black; }
+nav a:visited { color: black;}
+nav a:hover { color: darkblue; }
+
