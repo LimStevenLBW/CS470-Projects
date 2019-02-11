@@ -1,0 +1,126 @@
+/*Lab Assignment 3 StyleSheet*/
+html{
+    background-color: #E8EAF6;
+}
+
+body{
+    background-color: #ffffff;
+    width: 80%;
+    margin: 0 auto 0 auto;
+    font-family: "Georgia", "Cambria", "Times New Roman", serif;
+}
+
+header{
+    color: white;
+    background-color: #1A237E;
+    padding: 0px 5px 5px 5px;
+}
+
+header p{
+    margin: 0px;
+    padding: 0px;
+}
+
+nav{
+    background-color: #3F51B5;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+}
+li{
+    display: inline;
+    text-decoration: none;
+}
+
+li a {
+    color: #00B0FF;
+    text-decoration: none;
+    padding: 1px 5px 1px 5px;
+}
+
+li a:hover {
+    background-color: #F50057;
+}
+
+main{
+    margin: auto;
+    width: 90%;
+}
+
+section{
+    border: 1px solid grey;
+    margin-top: 15px;
+    clear: both;
+}
+section h2{
+    background-color: #7986CB;
+    color: whitesmoke;
+    padding: 5px;
+    margin: 0;
+}
+
+img{
+    display: block;
+}
+
+h1,h2,h3{
+    font-family: "Trebuchet MS", "Lucida Grande", Tahoma, sans-serif;
+    padding: 0;
+}
+
+figure{
+    margin: 0;
+}
+
+figcaption{
+    background-color: #C5CAE9;
+    color: darkslateblue;
+    font-style: italic;
+    font-size: 16px;
+    font-family: "Trebuchet MS", "Lucida Grande", Tahoma, sans-serif;
+    font-weight: bold;
+    padding: 5px;
+    margin: 0;
+}
+
+footer{
+    color: whitesmoke;
+    background-color: #1A237E;
+    padding: 5px;
+    margin-top: 10px;
+}
+footer a{
+    color: #00B0FF;   
+}
+
+#description{
+    padding: 5px;
+}
+#related img{
+    float: left;
+}
+
+#related::after{
+  content: "";
+  clear: both;
+  display: table;
+    
+}
+#reviews{
+    padding: 5px;
+}
+
+.user{
+    color: darkslateblue;
+    font-style: italic;
+    display: inline;
+}
+.date{
+    color: #ff80ab;
+    font-style: italic;
+    display: inline;
+}
