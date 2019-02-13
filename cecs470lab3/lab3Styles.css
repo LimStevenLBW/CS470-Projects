@@ -75,6 +75,9 @@ h1,h2,h3{
 figure{
     margin: 0;
 }
+figure img{
+    width: 100%;
+}
 
 figcaption{
     background-color: #C5CAE9;
@@ -102,13 +105,14 @@ footer a{
 }
 #related img{
     float: left;
+    height: 95px;
+    width: 95px;
 }
 
 #related::after{
   content: "";
   clear: both;
-  display: table;
-    
+  display: table;  
 }
 #reviews{
     padding: 5px;
