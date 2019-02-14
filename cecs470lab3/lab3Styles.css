@@ -13,7 +13,7 @@ body{
 header{
     color: white;
     background-color: #1A237E;
-    padding: 0px 5px 5px 5px;
+    padding: 5px 15px 5px 15px;
 }
 
 header p{
@@ -27,7 +27,7 @@ nav{
 
 ul{
     list-style-type: none;
-    padding: 0;
+    padding: 5px 15px 5px 9px;
     margin: 0;
     
 }
@@ -39,11 +39,12 @@ li{
 li a {
     color: #00B0FF;
     text-decoration: none;
-    padding: 1px 5px 1px 5px;
+    padding: 5px 5px 5px 5px;
 }
 
 li a:hover {
     background-color: #F50057;
+    color: whitesmoke;
 }
 
 main{
@@ -59,7 +60,7 @@ section{
 section h2{
     background-color: #7986CB;
     color: whitesmoke;
-    padding: 5px;
+    padding: 10px;
     margin: 0;
 }
 
@@ -86,27 +87,38 @@ figcaption{
     font-size: 16px;
     font-family: "Trebuchet MS", "Lucida Grande", Tahoma, sans-serif;
     font-weight: bold;
-    padding: 5px;
+    padding: 10px;
     margin: 0;
 }
 
 footer{
     color: whitesmoke;
     background-color: #1A237E;
-    padding: 5px;
+    padding: 20px 15px 5px 15px;
     margin-top: 10px;
 }
 footer a{
     color: #00B0FF;   
 }
+footer a:hover{
+    color: whitesmoke;
+}
+footer p{
+    font-style: italic;
+}
 
 #description{
-    padding: 5px;
+    padding: 10px;
 }
 #related img{
     float: left;
     height: 95px;
     width: 95px;
+    margin-right: 2px;
+    padding-bottom: 2px;
+}
+#related img:hover{
+    background-color: red;
 }
 
 #related::after{
@@ -115,7 +127,7 @@ footer a{
   display: table;  
 }
 #reviews{
-    padding: 5px;
+    padding: 10px;
 }
 
 .user{
