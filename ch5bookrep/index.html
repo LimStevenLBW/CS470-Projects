@@ -1,0 +1,91 @@
+<!doctype html>
+
+<html lang="en">
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Steven Lim">
+    <title>CECS 470 Lab Assignment 5: Book Rep Customer Management</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+    
+<body>
+    <!-- Page Header and Title -->
+    <header>
+       
+    </header>
+    
+     <!-- Primary Content -->
+    <main>
+        
+        <section>
+            <h2>Data</h2>
+            <table>
+                <caption>Orders</caption>
+                <tr>
+                    <th>ID</th> <th>Date</th> <th>Customer</th> <th>Country</th> <th>Progress</th> <th>Status</th>
+                </tr>
+                <tr>
+                    <td>123</td> <td>Sep 12, 2017</td> <td>Jean Rousseau</td> <td>France</td> 
+                    <td><progress value = "100" max = "100"></progress></td> <td><span class = "status-shipped">Shipped</span></td>
+                </tr>
+                <tr>
+                    <td>144</td> <td>Sep 20, 2017</td> <td>Georg Hegel</td> <td>Germany</td> 
+                    <td><progress value = "100" max = "100"></progress></td> <td><span class = "status-shipped">Shipped</span></td>
+                </tr>
+                <tr>
+                    <td>144</td> <td>Oct 3, 2017</td> <td>John Locke</td> <td>England</td> 
+                    <td><progress value = "50" max = "100"></progress></td> <td><span class = "status-processing">Processing</span></td>
+                </tr>
+                <tr>
+                    <td>162</td> <td>Oct 8, 2017</td> <td>Thomas Hobbes</td> <td>England</td> 
+                    <td><progress value = "25" max = "100"></progress></td> <td><span class = "status-pending">Pending</span></td>
+                </tr>
+                <tr>
+                    <td>177</td> <td>Oct 10, 2017</td> <td>Johann Fichte</td> <td>Germany</td>
+                    <td><progress value = "25" max = "100"></progress></td> <td><span class = "status-pending">Pending</span></td>
+                </tr>
+            </table>
+            
+        </section>
+        
+        <section>
+            <h2>Revise</h2>
+            <form method = "get" action = "http://www.randyconnolly.com/tests/process.php">
+                <fieldset>
+                    <legend>Filter Orders</legend>
+                    <h3>Customer</h3>
+                    <input type = "text" name = "customer" value = "Enter Name"><br>
+                    <h3>Country</h3>
+                    <select name = "country">
+                        <option disabled selected>Choose a Country</option>
+                        <option value = "france">France</option>
+                        <option value = "england">England</option>
+                        <option value = "germany">Germany</option>
+                        <option value = "spain">Spain</option>
+
+                        
+                    </select><br><br>
+                    <h3>Status</h3>
+                    <input type="radio" name="status" value="shipped"> Shipped
+                    <input type="radio" name="status" value="processing"> Processing
+                    <input type="radio" name="status" value="pending"> Pending
+                    <br>
+                    
+                    <h3>Order Date</h3>
+                    <input type="date" name="order-date"><br>
+                    <input type="submit" id= "button">
+                </fieldset>
+            </form>
+        </section>
+    
+    </main>
+    
+     <!-- Closing Footer Division -->
+    <footer>
+    </footer>
+</body>
+
+    
+</html>

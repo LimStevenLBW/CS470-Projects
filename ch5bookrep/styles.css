@@ -1,0 +1,95 @@
+html{
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; 
+    font-size: 14px;
+}
+
+h2{
+    background-color: #1c283d;
+    color: snow;
+    padding: 5px 0px 5px 10px; 
+    margin: 0;
+}
+
+h3{
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 4px;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+table{
+    margin: auto;
+    margin-top: 10px;
+}
+
+table caption, legend{
+    color: whitesmoke;
+    background-color: #607D8B;
+    padding: 7px;
+}
+
+th{
+    text-align: left;
+    padding: 7px 0px 7px 0px;
+}
+
+td{
+    padding: 15px 35px 15px 0px;
+}
+
+section{
+    border: 1px solid black;
+    background-color: whitesmoke;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+span{
+    border-radius: 5px;
+    padding: 3px;
+}
+
+legend{
+    text-align: center;
+    width: 90%;
+}
+    
+fieldset{
+    padding: 15px;
+}
+
+form{
+    margin:auto;
+    width: 70%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+input{
+   margin-bottom: 15px;
+}
+
+#button{
+    background-color: purple;
+    color: whitesmoke;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    font-size: 16px;
+}
+
+.status-shipped{
+    color: whitesmoke;
+    background-color: forestgreen;
+}
+.status-processing{
+    color: whitesmoke;
+    background-color: indianred;
+}
+.status-pending{
+    color: whitesmoke;
+    background-color: royalblue;
+}
