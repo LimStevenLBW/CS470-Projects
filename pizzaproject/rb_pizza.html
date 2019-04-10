@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <!--   
 
@@ -8,12 +9,11 @@
       Filename:   rb_pizza.html
 
    -->
-   
+
    <meta charset="utf-8" />
    <title>Red Ball Pizza Build a Pizza</title>
    <link href="rb_base.css" rel="stylesheet" />
    <link href="rb_layout.css" rel="stylesheet" />
-   <link href="rb_forms.css" rel="stylesheet" />
    <script src="rb_build.js" async></script>
 </head>
 
@@ -32,38 +32,38 @@
          </ul>
       </nav>
    </header>
-   
+
 
    <section id="build">
-      <h1>Build your Pizza</h1>       
+      <h1>Build your Pizza</h1>
       <div id="previewBox"></div>
-      
+
       <div id="pizzaBox">
          <h1>MY PIZZA</h1>
          <p id="pizzaSummary">14" pizza, thin </p>
          <label id="quantityLabel" for="pizzaQuantity">Quantity</label>
          <select id="pizzaQuantity" name="pizzaQuantity">
             <option value="1">1</option>
-            <option value="2">2</option> 
-            <option value="3">3</option>           
+            <option value="2">2</option>
+            <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
             <option value="6">6</option>
             <option value="7">7</option>
             <option value="8">8</option>
             <option value="9">9</option>
-            <option value="10">10</option>                     
+            <option value="10">10</option>
          </select>
          <input type="button" id="addToCart" value="ADD TO CART" />
-      </div>        
-      
+      </div>
+
       <fieldset id="pizzaOptions">
          <label id="sizeLabel" for="pizzaSize">Size (in.)</label>
          <select id="pizzaSize" name="pizzaSize">
             <option value="12">12" ($11.00)</option>
-            <option value="14" selected>14" ($13.00)</option> 
-            <option value="16">16" ($16.00)</option>                                
-         </select>         
+            <option value="14" selected>14" ($13.00)</option>
+            <option value="16">16" ($16.00)</option>
+         </select>
          <label for="crustBox">Pizza Crust</label>
          <select name="pizzaCrust" id="pizzaCrust">
             <option value="thin" selected>thin</option>
@@ -71,13 +71,13 @@
             <option value="stuffed">stuffed (+ $3.00)</option>
             <option value="pan">pan (+ $2.00)</option>
          </select>
-         <label for="doubleSauce">Double Sauce<br />(+ $1.50)</label> 
-         <input type="checkbox" id="doubleSauce" name="doubleSauce" />          
-         <label for="doubleCheese">Double Cheese<br />(+ $1.50)</label>      
-         <input type="checkbox" id="doubleCheese" name="doubleCheese" />         
+         <label for="doubleSauce">Double Sauce<br />(+ $1.50)</label>
+         <input type="checkbox" id="doubleSauce" name="doubleSauce" />
+         <label for="doubleCheese">Double Cheese<br />(+ $1.50)</label>
+         <input type="checkbox" id="doubleCheese" name="doubleCheese" />
 
       </fieldset>
-      
+
       <fieldset id="toppings">
          <div>
             <label>Toppings ($1.50 ea.)</label>
@@ -149,21 +149,26 @@
             <input class="topping" type="radio" name="jalapeno" value="right" />
             <input class="topping" type="radio" name="jalapeno" value="none" checked />
          </div>
-      </fieldset>                        
-           
+      </fieldset>
+
    </section>
-   
-   
+
+
    <aside id="cart">
       <h1>Shopping Cart</h1>
       <table id="cartTable">
-        <thead>
-           <tr><th>item</th><th>qty</th><th>price</th><th></th></tr>
+         <thead>
+            <tr>
+               <th>item</th>
+               <th>qty</th>
+               <th>price</th>
+               <th></th>
+            </tr>
          </thead>
          <tfoot>
-           <tr>
+            <tr>
                <td colspan="2">TOTAL</td>
-               <td colspan="2"><input type="text" id="cartTotal" value="" readonly/></td>
+               <td colspan="2"><input type="text" id="cartTotal" value="" readonly /></td>
             </tr>
          </tfoot>
          <tbody>
@@ -177,13 +182,14 @@
       <h1>ABOUT US</h1>
       <a href="#">Our Story</a> <a href="#">Blog</a> <a href="#">Catering</a>
       <h1>CUSTOMER SERVICE</h1>
-      <a href="#">Gluten Free Crusts</a> <a href="#">Contact Us</a> 
+      <a href="#">Gluten Free Crusts</a> <a href="#">Contact Us</a>
       <address>
-      Red Ball Pizza <br />
-      811 Beach Drive <br />
-      Ormond Beach, FL  32175 <br />
-      (386) 555 - 7499
+         Red Ball Pizza <br />
+         811 Beach Drive <br />
+         Ormond Beach, FL 32175 <br />
+         (386) 555 - 7499
       </address>
    </footer>
 </body>
+
 </html>
