@@ -1,9 +1,9 @@
 "use strict";
 
 /*
+   Steven Lim and Brian Ashley
    Filename: rb_build.js
 */
-
 
    /* Object literal that stores the price of the pizza items */
    const pizzaPrices = {
@@ -88,6 +88,7 @@ function cart() {
 /* Method to return the total cost of the items in the cart */
 cart.prototype.calcCartTotal = function () {
    let cartTotal = 0;
+   //Iterate through the items in the cart, adding their price to the toal
    this.items.forEach(function (item) {
       cartTotal += item.calcItemCost();
 
@@ -133,7 +134,7 @@ window.addEventListener("load", function() {
    //Create a shopping cart
    let myCart = new cart();
 
-   // Event handlers to draw the pizza image
+   // Event handlers to draw the pizza image, assign to the drawPizza function obj
    pizzaSizeBox.onchange = drawPizza;
    pizzaCrustBox.onchange = drawPizza;
    pizzaDoubleSauceBox.onclick = drawPizza;
@@ -142,7 +143,7 @@ window.addEventListener("load", function() {
    for (let i = 0; i < toppingOptions.length; i++) {
       toppingOptions[i].onclick = drawPizza;
    }
-
+   //Assign the addPizzaToCart function obj to the add to cart button
    addToCartButton.onclick = addPizzaToCart;
 
    // Function to build the pizza, acquires the selected values from the user
@@ -152,14 +153,14 @@ window.addEventListener("load", function() {
       newPizza.crust = pizzaCrustBox.value;
       newPizza.dsauce = pizzaDoubleSauceBox.checked;
       newPizza.dcheese = pizzaDoubleCheeseBox.checked;
-
+      //Fill the pizza's list of toppings
       let checkedToppings = document.querySelectorAll("input.topping:checked");
       for (let i = 0; i < checkedToppings.length; i++) {
          if (checkedToppings[i].value !== "none") {
             let myTopping = new topping();
             myTopping.name = checkedToppings[i].name;
             myTopping.side = checkedToppings[i].value;
-
+            //The price of toppings are halved when only added to one side
             if (checkedToppings[i].value === "full") {
                myTopping.qty = 1;
             }
@@ -168,16 +169,16 @@ window.addEventListener("load", function() {
             }
             newPizza.topping.push(myTopping);
          }
-
       }
-
    }
 
    // Function to add the built pizza to the shopping cart
    function addPizzaToCart() {
+      //Create a new pizza, initialize its variables, and then add it to the cart
       let myPizza = new pizza();
       buildPizza(myPizza);
       myPizza.addToCart(myCart);
+      //Begin assembling a table element for the new item
       let newItemRow = document.createElement("tr");
       cartTableBody.appendChild(newItemRow);
 
@@ -188,21 +189,21 @@ window.addEventListener("load", function() {
       let qtyCell = document.createElement("td");
       qtyCell.textContent = myPizza.qty;
       newItemRow.appendChild(qtyCell);
-
+      //Calculate the price and display
       let priceCell = document.createElement("td");
       priceCell.textContent = myPizza.calcPizzaPrice().toLocaleString('en-US', {style: "currency", currency: "USD"});
 
       newItemRow.append(priceCell);
-
+      //Create a remove button
       let removeCell = document.createElement("td");
       let removeButton = document.createElement("input");
       removeButton.value = "X";
       removeButton.type = "button";
       removeCell.append(removeButton);
       newItemRow.append(removeCell);
-
+      //Calculate the total value
       cartTotalBox.value = myCart.calcCartTotal().toLocaleString('en-US', {style: "currency", currency: "USD"});
-
+      //Assign the anonymous function for removing an item
       removeButton.onclick = function () {
          myPizza.removeFromCart(myCart);
          cartTableBody.removeChild(newItemRow);
@@ -212,6 +213,7 @@ window.addEventListener("load", function() {
       resetDrawPizza();
    }
 
+   //Draws toppings and additives to the pizza preview image
    function drawPizza() {
       pizzaPreviewBox.removeChildren;
       let pizzaDescription = "";
@@ -222,6 +224,7 @@ window.addEventListener("load", function() {
       let cheeseImg = document.createElement("img");
       let removableSauce = document.getElementById("doubleSaucePreview");
       let removableCheese = document.getElementById("doubleCheesePreview");
+      //Handles Cheese and Sauce options, allowing it to be displayed and also removing it when the option is unchecked
       if (pizzaDoubleSauceBox.checked && !removableSauce) {
          sauceImg.id = "doubleSaucePreview";
          sauceImg.src = "rb_doublesauce.png";
@@ -241,7 +244,7 @@ window.addEventListener("load", function() {
       else if (!pizzaDoubleCheeseBox.checked && removableCheese){
          pizzaPreviewBox.removeChild(removableCheese);
       }
-      
+      //Handles toppings display and removal
       let checkedToppings = document.querySelectorAll("input.topping:checked");
       for (let i = 0; i < checkedToppings.length; i++) {
          let toppingImage = document.createElement('img');
@@ -251,13 +254,13 @@ window.addEventListener("load", function() {
             pizzaDescription += ", " + checkedToppings[i].name + "(" + checkedToppings[i].value + ")";
             toppingImage.id = checkedToppings[i].name + "Preview";
             toppingImage.src = "./rb_" + checkedToppings[i].name + ".png";
-
+            //If the item already exists, remove it
             if (removableNode)
                pizzaPreviewBox.removeChild(removableNode);
-
+            //Create the image
             pizzaPreviewBox.appendChild(toppingImage);
-
-
+         
+            //Clip it on either the left or right depending on the value
             if (checkedToppings[i].value === "left") {
                toppingImage.style.clip = "rect(0px, 150px, 300px, 0px)";
             }
@@ -269,7 +272,7 @@ window.addEventListener("load", function() {
                pizzaPreviewBox.removeChild(removableNode);
          }
 
-
+         //Update the summary
          pizzaSummary.textContent = pizzaDescription;
       }
    }
