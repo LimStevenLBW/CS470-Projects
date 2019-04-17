@@ -222,27 +222,33 @@ window.addEventListener("load", function() {
 
       let sauceImg = document.createElement("img");
       let cheeseImg = document.createElement("img");
-      let removableSauce = document.getElementById("doubleSaucePreview");
-      let removableCheese = document.getElementById("doubleCheesePreview");
+      let doubleSauceElement = document.getElementById("doubleSaucePreview");
+      let doubleCheeseElement = document.getElementById("doubleCheesePreview");
       //Handles Cheese and Sauce options, allowing it to be displayed and also removing it when the option is unchecked
-      if (pizzaDoubleSauceBox.checked && !removableSauce) {
-         sauceImg.id = "doubleSaucePreview";
-         sauceImg.src = "rb_doublesauce.png";
-         pizzaPreviewBox.appendChild(sauceImg);
+      if (pizzaDoubleSauceBox.checked) {
+         //Only append if the image isn't there
+         if(!doubleSauceElement){
+            sauceImg.id = "doubleSaucePreview";
+            sauceImg.src = "rb_doublesauce.png";
+            pizzaPreviewBox.appendChild(sauceImg);
+         }
+         //Add description regardless whenever checked
          pizzaDescription += ", double sauce";
       }
-      else if(!pizzaDoubleSauceBox.checked && removableSauce){
-         pizzaPreviewBox.removeChild(removableSauce);
+      else if(!pizzaDoubleSauceBox.checked && doubleSauceElement){
+         pizzaPreviewBox.removeChild(doubleSauceElement);
       }
 
-      if (pizzaDoubleCheeseBox.checked && !removableCheese) {
-         cheeseImg.id = "doubleCheesePreview";
-         cheeseImg.src = "rb_doublecheese.png";
-         pizzaPreviewBox.appendChild(cheeseImg);
+      if (pizzaDoubleCheeseBox.checked) {
+         if(!doubleCheeseElement){
+            cheeseImg.id = "doubleCheesePreview";
+            cheeseImg.src = "rb_doublecheese.png";
+            pizzaPreviewBox.appendChild(cheeseImg);
+         }
          pizzaDescription += ", double cheese";
       }
-      else if (!pizzaDoubleCheeseBox.checked && removableCheese){
-         pizzaPreviewBox.removeChild(removableCheese);
+      else if (!pizzaDoubleCheeseBox.checked && doubleCheeseElement){
+         pizzaPreviewBox.removeChild(doubleCheeseElement);
       }
       //Handles toppings display and removal
       let checkedToppings = document.querySelectorAll("input.topping:checked");
